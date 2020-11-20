@@ -1,0 +1,16 @@
+module control (sel,y);
+input [1:0] sel;
+output [2:0] y;
+
+reg [2:0] y;
+
+always @ (sel)
+begin
+case (sel)
+	2'b00 : y = 3'b000;
+	2'b01 : y = 3'b001;
+	2'b10 : y = 3'b010;
+	2'b11 : y = 3'b011;
+endcase
+end
+endmodule
